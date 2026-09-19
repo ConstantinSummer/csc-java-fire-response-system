@@ -1,0 +1,502 @@
+===========================================
+  Greek Fire Response Coordination System
+===========================================
+CSC - Computer Science Center | https://csc.gr | Educational sample data, not real incidents
+
+MAIN MENU
+   1. Report a new wildfire incident
+   2. List active incidents
+   3. Show incident details
+   4. Assign a resource to an incident
+   5. Change incident status
+   6. Show fire service resources
+   7. Set a resource out of service / return it to service
+   8. Search and filter incidents
+   9. Suggest the nearest available resource
+  10. Statistics (severity / status / region)
+  11. Resource utilisation
+   0. Exit
+Choose an option (0-11): 2
+
+========================================
+  Active incidents (most severe first)
+========================================
++----+------------------+----------------+--------------------+----------+------------+-----------+---------+
+| ID | Reported         | Region         | Area               | Severity | Status     | Resources | Points  |
++----+------------------+----------------+--------------------+----------+------------+-----------+---------+
+|  3 | 2026-07-18 09:40 | Central Greece | Prokopi, Evia      | Critical | Active     |         6 | 187/200 |
+| 12 | 2026-08-05 13:00 | Western Greece | Ancient Olympia    | Critical | Active     |         5 | 161/200 |
+|  1 | 2026-07-15 13:20 | Attica         | Marathon foothills | High     | Active     |         3 |  86/120 |
+|  4 | 2026-07-20 14:10 | Peloponnese    | Taygetos foothills | High     | Responding |         2 |  58/120 |
+| 11 | 2026-08-03 16:20 | North Aegean   | Mytilene hills     | High     | Reported   |         0 |   0/120 |
+|  2 | 2026-07-15 16:05 | Attica         | Penteli            | Moderate | Contained  |         3 |   84/60 |
+|  6 | 2026-07-24 15:45 | South Aegean   | Laerma             | Moderate | Active     |         2 |   45/60 |
+| 10 | 2026-08-02 12:30 | Ionian Islands | Pantokrator        | Moderate | Reported   |         0 |    0/60 |
+|  5 | 2026-07-22 11:30 | Crete          | Apokoronas         | Low      | Reported   |         0 |    0/20 |
++----+------------------+----------------+--------------------+----------+------------+-----------+---------+
+9 active of 14 recorded incidents (registry capacity 60). Points = assigned / recommended.
+
+MAIN MENU
+   1. Report a new wildfire incident
+   2. List active incidents
+   3. Show incident details
+   4. Assign a resource to an incident
+   5. Change incident status
+   6. Show fire service resources
+   7. Set a resource out of service / return it to service
+   8. Search and filter incidents
+   9. Suggest the nearest available resource
+  10. Statistics (severity / status / region)
+  11. Resource utilisation
+   0. Exit
+Choose an option (0-11): abc
+  ! Please enter a whole number between 0 and 11.
+Choose an option (0-11): 1
+
+==================================
+  Report a new wildfire incident
+==================================
+Description: Brush fire near olive groves above Molaoi
+Region:
+  1. Attica
+  2. Central Greece
+  3. Peloponnese
+  4. Western Greece
+  5. Thessaly
+  6. Epirus
+  7. Central Macedonia
+  8. E. Macedonia-Thrace
+  9. Western Macedonia
+  10. Ionian Islands
+  11. North Aegean
+  12. South Aegean
+  13. Crete
+Choose 1-13: 3
+Area / locality: Molaoi
+Latitude (34.5 to 42.0): 36.81
+Longitude (19.0 to 29.9): 22.86
+Severity:
+  1. Low
+  2. Moderate
+  3. High
+  4. Critical
+Choose 1-4: 3
+Reported at (yyyy-MM-dd HH:mm, Enter = now): 
+Incident #15 reported (High, Molaoi, Peloponnese). Status: Reported.
+
+MAIN MENU
+   1. Report a new wildfire incident
+   2. List active incidents
+   3. Show incident details
+   4. Assign a resource to an incident
+   5. Change incident status
+   6. Show fire service resources
+   7. Set a resource out of service / return it to service
+   8. Search and filter incidents
+   9. Suggest the nearest available resource
+  10. Statistics (severity / status / region)
+  11. Resource utilisation
+   0. Exit
+Choose an option (0-11): 9
+
+==========================================
+  Suggest the nearest available resource
+==========================================
+Incident id: 15
+Resource type needed:
+  1. Wildland engine
+  2. Water tender
+  3. Command vehicle
+  4. Helicopter
+  5. Water bomber
+  6. Response team
+Choose 1-6: 1
+Nearest: CHN-E1 (3000 L tank, 4x4) at Chania Station, about 177.7 km from the incident.
+Assign it to incident #15 now (y/n): y
+CHN-E1 assigned to incident #15.
+
+MAIN MENU
+   1. Report a new wildfire incident
+   2. List active incidents
+   3. Show incident details
+   4. Assign a resource to an incident
+   5. Change incident status
+   6. Show fire service resources
+   7. Set a resource out of service / return it to service
+   8. Search and filter incidents
+   9. Suggest the nearest available resource
+  10. Statistics (severity / status / region)
+  11. Resource utilisation
+   0. Exit
+Choose an option (0-11): 4
+
+====================================
+  Assign a resource to an incident
+====================================
+Incident id: 15
+Available resources:
++----+----------+-----------------+---------------------------+-----------+---------------------------------+--------+-------------+
+| ID | Name     | Type            | Station                   | Status    | Capability                      | Points | Deployments |
++----+----------+-----------------+---------------------------+-----------+---------------------------------+--------+-------------+
+|  5 | ATT-T1   | Response team   | Athens North Station      | Available | 5 members, leader K. Ioannou    |     27 |           0 |
+|  9 | MAR-T2   | Response team   | Marathon Station          | Available | 2 members, leader N. Kalos      |      9 |           0 |
+| 16 | CHA-T1   | Response team   | Chalkida Station          | Available | 4 members, leader V. Anagnostou |     21 |           0 |
+| 22 | KAL-WT1  | Water tender    | Kalamata Station          | Available | 15000 L bulk water supply       |     30 |           0 |
+| 24 | VOL-E1   | Wildland engine | Volos Station             | Available | 3000 L tank, 4x4                |     35 |           1 |
+| 26 | VOL-H1   | Helicopter      | Volos Station             | Available | 2500 L per drop                 |     25 |           1 |
+| 27 | VOL-T1   | Response team   | Volos Station             | Available | 4 members, leader Q. Efthymiou  |     21 |           1 |
+| 28 | THE-E1   | Wildland engine | Thessaloniki East Station | Available | 3500 L tank, 4x4                |     40 |           1 |
+| 29 | THE-E2   | Wildland engine | Thessaloniki East Station | Available | 2500 L tank, 4x4                |     30 |           2 |
+| 30 | THE-WT1  | Water tender    | Thessaloniki East Station | Available | 20000 L bulk water supply       |     40 |           1 |
+| 31 | THE-CMD1 | Command vehicle | Thessaloniki East Station | Available | 5 radio channels, coordination  |     15 |           0 |
+| 32 | THE-T1   | Response team   | Thessaloniki East Station | Available | 6 members, leader D. Kourtis    |     30 |           0 |
+| 35 | CHN-T1   | Response team   | Chania Station            | Available | 4 members, leader G. Frangos    |     21 |           0 |
+| 37 | RHO-WT1  | Water tender    | Rhodes Station            | Available | 8000 L bulk water supply        |     16 |           0 |
++----+----------+-----------------+---------------------------+-----------+---------------------------------+--------+-------------+
+Resource id to assign: 1
+  ! ATT-E1 is not available (status: Deployed)
+
+MAIN MENU
+   1. Report a new wildfire incident
+   2. List active incidents
+   3. Show incident details
+   4. Assign a resource to an incident
+   5. Change incident status
+   6. Show fire service resources
+   7. Set a resource out of service / return it to service
+   8. Search and filter incidents
+   9. Suggest the nearest available resource
+  10. Statistics (severity / status / region)
+  11. Resource utilisation
+   0. Exit
+Choose an option (0-11): 4
+
+====================================
+  Assign a resource to an incident
+====================================
+Incident id: 15
+Available resources:
++----+----------+-----------------+---------------------------+-----------+---------------------------------+--------+-------------+
+| ID | Name     | Type            | Station                   | Status    | Capability                      | Points | Deployments |
++----+----------+-----------------+---------------------------+-----------+---------------------------------+--------+-------------+
+|  5 | ATT-T1   | Response team   | Athens North Station      | Available | 5 members, leader K. Ioannou    |     27 |           0 |
+|  9 | MAR-T2   | Response team   | Marathon Station          | Available | 2 members, leader N. Kalos      |      9 |           0 |
+| 16 | CHA-T1   | Response team   | Chalkida Station          | Available | 4 members, leader V. Anagnostou |     21 |           0 |
+| 22 | KAL-WT1  | Water tender    | Kalamata Station          | Available | 15000 L bulk water supply       |     30 |           0 |
+| 24 | VOL-E1   | Wildland engine | Volos Station             | Available | 3000 L tank, 4x4                |     35 |           1 |
+| 26 | VOL-H1   | Helicopter      | Volos Station             | Available | 2500 L per drop                 |     25 |           1 |
+| 27 | VOL-T1   | Response team   | Volos Station             | Available | 4 members, leader Q. Efthymiou  |     21 |           1 |
+| 28 | THE-E1   | Wildland engine | Thessaloniki East Station | Available | 3500 L tank, 4x4                |     40 |           1 |
+| 29 | THE-E2   | Wildland engine | Thessaloniki East Station | Available | 2500 L tank, 4x4                |     30 |           2 |
+| 30 | THE-WT1  | Water tender    | Thessaloniki East Station | Available | 20000 L bulk water supply       |     40 |           1 |
+| 31 | THE-CMD1 | Command vehicle | Thessaloniki East Station | Available | 5 radio channels, coordination  |     15 |           0 |
+| 32 | THE-T1   | Response team   | Thessaloniki East Station | Available | 6 members, leader D. Kourtis    |     30 |           0 |
+| 35 | CHN-T1   | Response team   | Chania Station            | Available | 4 members, leader G. Frangos    |     21 |           0 |
+| 37 | RHO-WT1  | Water tender    | Rhodes Station            | Available | 8000 L bulk water supply        |     16 |           0 |
++----+----------+-----------------+---------------------------+-----------+---------------------------------+--------+-------------+
+Resource id to assign: 30
+THE-WT1 assigned to incident #15. Resourcing is now 75 of 120 recommended points.
+
+MAIN MENU
+   1. Report a new wildfire incident
+   2. List active incidents
+   3. Show incident details
+   4. Assign a resource to an incident
+   5. Change incident status
+   6. Show fire service resources
+   7. Set a resource out of service / return it to service
+   8. Search and filter incidents
+   9. Suggest the nearest available resource
+  10. Statistics (severity / status / region)
+  11. Resource utilisation
+   0. Exit
+Choose an option (0-11): 5
+
+==========================
+  Change incident status
+==========================
+Incident id: 15
+Current status: Reported
+Allowed next statuses: Responding, False alarm
+New status:
+  1. Reported
+  2. Responding
+  3. Active
+  4. Contained
+  5. Extinguished
+  6. False alarm
+Choose 1-6: 3
+  ! Cannot change status from Reported to Active
+
+MAIN MENU
+   1. Report a new wildfire incident
+   2. List active incidents
+   3. Show incident details
+   4. Assign a resource to an incident
+   5. Change incident status
+   6. Show fire service resources
+   7. Set a resource out of service / return it to service
+   8. Search and filter incidents
+   9. Suggest the nearest available resource
+  10. Statistics (severity / status / region)
+  11. Resource utilisation
+   0. Exit
+Choose an option (0-11): 5
+
+==========================
+  Change incident status
+==========================
+Incident id: 15
+Current status: Reported
+Allowed next statuses: Responding, False alarm
+New status:
+  1. Reported
+  2. Responding
+  3. Active
+  4. Contained
+  5. Extinguished
+  6. False alarm
+Choose 1-6: 2
+Incident #15 is now Responding.
+
+MAIN MENU
+   1. Report a new wildfire incident
+   2. List active incidents
+   3. Show incident details
+   4. Assign a resource to an incident
+   5. Change incident status
+   6. Show fire service resources
+   7. Set a resource out of service / return it to service
+   8. Search and filter incidents
+   9. Suggest the nearest available resource
+  10. Statistics (severity / status / region)
+  11. Resource utilisation
+   0. Exit
+Choose an option (0-11): 3
+
+Incident id: 15
+Incident #15: Brush fire near olive groves above Molaoi
+  Location     : Molaoi, Peloponnese (36.810, 22.860)
+  Severity     : High
+  Status       : Responding
+  Reported     : 2026-08-14 16:00
+  Last update  : 2026-08-14 16:00
+  Resourcing   : 75 of 120 recommended points (insufficient)
+  Assignments  : 2 of 8 slots used
++----------+-----------------+---------------------------+------------------+----------+
+| Resource | Type            | Station                   | Assigned         | Released |
++----------+-----------------+---------------------------+------------------+----------+
+| CHN-E1   | Wildland engine | Chania Station            | 2026-08-14 16:00 | -        |
+| THE-WT1  | Water tender    | Thessaloniki East Station | 2026-08-14 16:00 | -        |
++----------+-----------------+---------------------------+------------------+----------+
+
+MAIN MENU
+   1. Report a new wildfire incident
+   2. List active incidents
+   3. Show incident details
+   4. Assign a resource to an incident
+   5. Change incident status
+   6. Show fire service resources
+   7. Set a resource out of service / return it to service
+   8. Search and filter incidents
+   9. Suggest the nearest available resource
+  10. Statistics (severity / status / region)
+  11. Resource utilisation
+   0. Exit
+Choose an option (0-11): 8
+
+===============================
+  Search and filter incidents
+===============================
+Search:
+  1. By id (linear vs binary search)
+  2. By region
+  3. By minimum severity
+  4. By status
+  5. By text in description / area
+Choose 1-5: 1
+Incident id: 14
+Linear search: found at index 13 after 14 comparisons
+Binary search: found at index 13 after 3 comparisons
++----+------------------+-------------------+--------------+----------+-------------+-----------+--------+
+| ID | Reported         | Region            | Area         | Severity | Status      | Resources | Points |
++----+------------------+-------------------+--------------+----------+-------------+-----------+--------+
+| 14 | 2026-08-06 09:10 | Western Macedonia | Kozani plain | Moderate | False alarm |         0 |   0/60 |
++----+------------------+-------------------+--------------+----------+-------------+-----------+--------+
+1 incident matches (most severe first).
+
+MAIN MENU
+   1. Report a new wildfire incident
+   2. List active incidents
+   3. Show incident details
+   4. Assign a resource to an incident
+   5. Change incident status
+   6. Show fire service resources
+   7. Set a resource out of service / return it to service
+   8. Search and filter incidents
+   9. Suggest the nearest available resource
+  10. Statistics (severity / status / region)
+  11. Resource utilisation
+   0. Exit
+Choose an option (0-11): 8
+
+===============================
+  Search and filter incidents
+===============================
+Search:
+  1. By id (linear vs binary search)
+  2. By region
+  3. By minimum severity
+  4. By status
+  5. By text in description / area
+Choose 1-5: 5
+Text to find: forest
++----+------------------+-------------------+--------------------+----------+--------------+-----------+---------+
+| ID | Reported         | Region            | Area               | Severity | Status       | Resources | Points  |
++----+------------------+-------------------+--------------------+----------+--------------+-----------+---------+
+|  3 | 2026-07-18 09:40 | Central Greece    | Prokopi, Evia      | Critical | Active       |         6 | 187/200 |
+|  1 | 2026-07-15 13:20 | Attica            | Marathon foothills | High     | Active       |         3 |  86/120 |
+|  8 | 2026-07-05 17:40 | Central Macedonia | Seich Sou          | Moderate | Extinguished |         0 |    0/60 |
+|  6 | 2026-07-24 15:45 | South Aegean      | Laerma             | Moderate | Active       |         2 |   45/60 |
++----+------------------+-------------------+--------------------+----------+--------------+-----------+---------+
+4 incidents match (most severe first).
+
+MAIN MENU
+   1. Report a new wildfire incident
+   2. List active incidents
+   3. Show incident details
+   4. Assign a resource to an incident
+   5. Change incident status
+   6. Show fire service resources
+   7. Set a resource out of service / return it to service
+   8. Search and filter incidents
+   9. Suggest the nearest available resource
+  10. Statistics (severity / status / region)
+  11. Resource utilisation
+   0. Exit
+Choose an option (0-11): 10
+
+==============
+  Statistics
+==============
+Incidents by severity
++----------+-----------+-------+
+| Severity | Incidents | Bar   |
++----------+-----------+-------+
+| Low      |         3 | ###   |
+| Moderate |         5 | ##### |
+| High     |         5 | ##### |
+| Critical |         2 | ##    |
++----------+-----------+-------+
+
+Incidents by status
++--------------+-----------+------+
+| Status       | Incidents | Bar  |
++--------------+-----------+------+
+| Reported     |         3 | ###  |
+| Responding   |         2 | ##   |
+| Active       |         4 | #### |
+| Contained    |         1 | #    |
+| Extinguished |         3 | ###  |
+| False alarm  |         2 | ##   |
++--------------+-----------+------+
+
+Incidents by region and severity (2D array: rows = regions, columns = severities)
++---------------------+-----+----------+------+----------+-------+
+| Region              | Low | Moderate | High | Critical | Total |
++---------------------+-----+----------+------+----------+-------+
+| Attica              |   0 |        1 |    1 |        0 |     2 |
+| Central Greece      |   0 |        0 |    0 |        1 |     1 |
+| Peloponnese         |   0 |        0 |    2 |        0 |     2 |
+| Western Greece      |   0 |        0 |    0 |        1 |     1 |
+| Thessaly            |   0 |        0 |    1 |        0 |     1 |
+| Epirus              |   1 |        0 |    0 |        0 |     1 |
+| Central Macedonia   |   0 |        1 |    0 |        0 |     1 |
+| E. Macedonia-Thrace |   1 |        0 |    0 |        0 |     1 |
+| Western Macedonia   |   0 |        1 |    0 |        0 |     1 |
+| Ionian Islands      |   0 |        1 |    0 |        0 |     1 |
+| North Aegean        |   0 |        0 |    1 |        0 |     1 |
+| South Aegean        |   0 |        1 |    0 |        0 |     1 |
+| Crete               |   1 |        0 |    0 |        0 |     1 |
+| Total               |   3 |        5 |    5 |        2 |    15 |
++---------------------+-----+----------+------+----------+-------+
+
+10 of 15 incidents are active.
+
+MAIN MENU
+   1. Report a new wildfire incident
+   2. List active incidents
+   3. Show incident details
+   4. Assign a resource to an incident
+   5. Change incident status
+   6. Show fire service resources
+   7. Set a resource out of service / return it to service
+   8. Search and filter incidents
+   9. Suggest the nearest available resource
+  10. Statistics (severity / status / region)
+  11. Resource utilisation
+   0. Exit
+Choose an option (0-11): 11
+
+========================
+  Resource utilisation
+========================
+Utilisation = deployed / in-service resources (out-of-service resources are excluded).
+
+By resource type
++-----------------+-------+----------+-----------+----------------+-------------+
+| Type            | Total | Deployed | Available | Out of service | Utilisation |
++-----------------+-------+----------+-----------+----------------+-------------+
+| Wildland engine |    16 |       11 |         3 |              2 |       78.6% |
+| Water tender    |     5 |        3 |         2 |              0 |       60.0% |
+| Command vehicle |     3 |        2 |         1 |              0 |       66.7% |
+| Helicopter      |     2 |        1 |         1 |              0 |       50.0% |
+| Water bomber    |     2 |        2 |         0 |              0 |      100.0% |
+| Response team   |    10 |        4 |         6 |              0 |       40.0% |
++-----------------+-------+----------+-----------+----------------+-------------+
+
+By station
++---------------------------+-------+----------+-----------+----------------+-------------+
+| Station                   | Total | Deployed | Available | Out of service | Utilisation |
++---------------------------+-------+----------+-----------+----------------+-------------+
+| Athens North Station      |     5 |        4 |         1 |              0 |       80.0% |
+| Marathon Station          |     4 |        3 |         1 |              0 |       75.0% |
+| Elefsina Air Base         |     3 |        3 |         0 |              0 |      100.0% |
+| Chalkida Station          |     4 |        3 |         1 |              0 |       75.0% |
+| Patras Station            |     4 |        4 |         0 |              0 |      100.0% |
+| Kalamata Station          |     3 |        2 |         1 |              0 |       66.7% |
+| Volos Station             |     4 |        0 |         3 |              1 |        0.0% |
+| Thessaloniki East Station |     5 |        1 |         4 |              0 |       20.0% |
+| Chania Station            |     3 |        1 |         1 |              1 |       50.0% |
+| Rhodes Station            |     3 |        2 |         1 |              0 |       66.7% |
++---------------------------+-------+----------+-----------+----------------+-------------+
+
+Overall: 23 of 36 in-service resources deployed (63.9%).
+
+Most frequently deployed resources
++------+----------+-----------------+---------------------------+-------------+
+| Rank | Resource | Type            | Station                   | Deployments |
++------+----------+-----------------+---------------------------+-------------+
+|    1 | THE-E2   | Wildland engine | Thessaloniki East Station |           2 |
+|    2 | THE-WT1  | Water tender    | Thessaloniki East Station |           2 |
+|    3 | ATT-E1   | Wildland engine | Athens North Station      |           1 |
+|    4 | ATT-E2   | Wildland engine | Athens North Station      |           1 |
+|    5 | ATT-WT1  | Water tender    | Athens North Station      |           1 |
++------+----------+-----------------+---------------------------+-------------+
+
+MAIN MENU
+   1. Report a new wildfire incident
+   2. List active incidents
+   3. Show incident details
+   4. Assign a resource to an incident
+   5. Change incident status
+   6. Show fire service resources
+   7. Set a resource out of service / return it to service
+   8. Search and filter incidents
+   9. Suggest the nearest available resource
+  10. Statistics (severity / status / region)
+  11. Resource utilisation
+   0. Exit
+Choose an option (0-11): 0
+
+Goodbye.
