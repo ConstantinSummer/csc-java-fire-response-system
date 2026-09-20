@@ -366,6 +366,7 @@ csc-java-fire-response-system/
 |-- pom.xml
 |-- README.en.md
 |-- README.md
+|-- RELEASE_NOTES.el.md
 `-- RELEASE_NOTES.md
 ```
 

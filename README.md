@@ -13,7 +13,7 @@
 | Repository | `csc-java-fire-response-system` |
 | Κύρια περιοχή | Java |
 | Επίπεδο μάθησης | Intermediate |
-| Τεκμηριωμένη έκδοση | [v1.0.0](https://github.com/ConstantinSummer/csc-java-fire-response-system/releases/tag/v1.0.0) ([release notes](RELEASE_NOTES.md)) |
+| Τεκμηριωμένη έκδοση | [v1.0.0](https://github.com/ConstantinSummer/csc-java-fire-response-system/releases/tag/v1.0.0) ([release notes](RELEASE_NOTES.el.md)) |
 
 ## Επισκόπηση έργου
 
@@ -366,6 +366,7 @@ csc-java-fire-response-system/
 |-- pom.xml
 |-- README.en.md
 |-- README.md
+|-- RELEASE_NOTES.el.md
 `-- RELEASE_NOTES.md
 ```
 
@@ -611,7 +612,7 @@ classDiagram
 Το project ακολουθεί τις [συμβάσεις ονοματοδοσίας και versioning του CSC](https://github.com/ConstantinSummer/csc-project-library/blob/main/docs/NAMING_AND_VERSIONING.md), με Semantic Versioning και tags που ξεκινούν με `v`.
 
 - Βασική έκδοση διδασκαλίας: [v1.0.0](https://github.com/ConstantinSummer/csc-java-fire-response-system/releases/tag/v1.0.0), η πρώτη πλήρως τεκμηριωμένη έκδοση.
-- Release notes: [RELEASE_NOTES.md](RELEASE_NOTES.md) και η σελίδα release του GitHub για το ίδιο tag.
+- Release notes: [RELEASE_NOTES.el.md](RELEASE_NOTES.el.md) (ελληνικά· η αγγλική έκδοση είναι το [RELEASE_NOTES.md](RELEASE_NOTES.md)) και η σελίδα release του GitHub για το ίδιο tag.
 - Συμβατότητα και μετάβαση: Καμία· πρόκειται για την αρχική βασική έκδοση.
 
 Χρησιμοποιείτε την τεκμηριωμένη έκδοση στα μαθήματα, ώστε ο κώδικας, οι ερωτήσεις ανασκόπησης και οι οδηγίες να ταιριάζουν.
